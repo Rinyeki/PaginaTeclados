@@ -1,0 +1,28 @@
+.navbar-divider-vertical {
+  display: inline-block;
+  border-right: 1px solid white;
+  height: 24px;
+  margin: 0 10px;
+  vertical-align: middle;
+}
+
+body {
+  background-color: #013A36;
+}
+
+.btn-custom {
+  transition: transform 0.3s;
+}
+
+.btn-custom:hover,
+.btn-custom:focus {
+  transform: scale(1.1);
+}
+
+.btn-hover {
+  transition: transform 0.3s;
+}
+
+.btn-hover:hover {
+  transform: scale(1.1);
+}
