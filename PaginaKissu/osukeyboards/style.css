@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+a{
+  color: #000;
+  text-decoration: none;
+}
+
+.navbar-divider-vertical {
+  display: inline-block;
+  border-right: 1px solid white;
+  height: 24px;
+  margin: 0 10px;
+  vertical-align: middle;
+}
+
+.teclado-img,
+.keycaps-img {
+    width: 300px;
+    height: 200px;
+}
