@@ -1,0 +1,138 @@
+.navbar-divider-vertical {
+    display: inline-block;
+    border-right: 1px solid white;
+    height: 24px;
+    margin: 0 10px;
+    vertical-align: middle;
+  }
+
+.nav-item{
+margin: 5px;
+}
+
+body{
+    background-color: #013A36;
+}
+
+.bienvenido{
+    color: #19312f;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 6vh;
+    font: bold;
+}
+
+.dudas{
+    height: 300px;
+}
+
+.row{
+    margin-top: 5%;
+    height: 200px;
+}
+
+.col-md-4{
+    text-align: center;
+    border: white;
+    border-width: 1px;
+    border-style: solid;
+    margin-right: 3%;
+}
+
+a{
+    text-decoration: none;
+}
+
+#contacto{
+    color: white;
+    text-align: center;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; font-size: 30px; font-style: italic; font-variant: normal; font-weight: 400; line-height: 33px; 
+}
+
+#mail{
+    color: white;
+    text-align: center;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; font-size: 30px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 33px;
+}
+
+#carrito{
+    justify-content: center;
+}
+
+.carrito{
+position: fixed;
+right: 0;
+height: 100vh;
+width: 24rem;
+z-index: 100;
+background-color: rgba(12, 56, 34, 0.4);
+backdrop-filter: blur(10px);
+color: white;
+animation: fadeInDown 1s forwards;
+transform: translateX(100%);
+}
+
+.childContainer{
+display: grid;
+height: max-content;
+grid-row: repeat(2, 50%);
+padding: 1.5rem;
+
+}
+
+.buttonContainer{
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 5rem;
+height: 4rem;
+transition: all 0.2s ease;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.buttonContainer a{
+color: rgb(255, 255, 255);
+border: 1px white solid;
+padding: 0.2vh;
+border-radius: 0.5vh;
+padding-left: 2vh;
+padding-right: 2vh;
+padding-top: 0.5vh;
+padding-bottom: 0.5vh;
+}
+
+.headersContainer{
+display: flex;
+column-gap: 5vh;
+}
+
+.totalContainer{
+display: flex;
+justify-content: center;
+align-items: center;
+column-gap: 8vh;
+border-top: 1px solid white;
+margin-top: 2rem;
+padding-top: 1vh;
+}
+
+.valueContainer{
+display: grid;
+grid-template-columns: repeat(3, 5rem);
+column-gap: 3.5vh;
+}
+
+@keyframes fadeInDown {
+    from {
+    opacity: 0;
+    transform: translateX(100%);
+    }
+    to {
+    opacity: 1;
+    transform: translateX(0);
+    }
+}

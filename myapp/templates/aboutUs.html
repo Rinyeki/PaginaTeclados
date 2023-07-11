@@ -1,0 +1,129 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de Kissu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/aboutUs.css' %}">
+    
+</head>
+<body style="background-image: url(https://64.media.tumblr.com/b8a5674d468c0d573f12a38b39f7d6f8/414cd42fcb19babe-a5/s1280x1920/0e0598472aabbcbe93ca2a247915502f15c53273.gif); background-size: cover;">
+    <!--comienzo de la navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'index' %}">
+                <img src="{% static 'img/logo.png' %}" alt="Logo de OsuDevs" width="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="{% url 'acerca' %}">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'teclados' %}">Teclados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'soporte' %}">Soporte</a>
+                    </li>
+                </ul>
+            </div>
+            <span class="navbar-divider-vertical"></span>
+            <div class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#login">Inicio de sesión/Registro</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#carrito">
+                        <i class="bi bi-basket3"></i>
+                    </a>
+                </li>
+            </div>
+        </div>
+    </nav>
+      <!--final de la navbar-->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <h1 style="text-align: center;">
+                    Acerca de Kissu
+                </h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <p style="text-align: center;">Kissu trata de entregar los mejores productos por los mejores precios</p>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-7">
+                <p style="text-align: center;">Kissu es una empresa compuesta por 6 jóvenes lideres egresados de DuocUC, nuestro
+                    objetivo es entregar los mejores productos y servicios para que todas las personas
+                    puedan acceder fácilmente y tener productos de una calidad incomparable.</p>
+            </div>
+        </div>
+
+        <!-- Arreglar con imagen del teclado.-->
+
+        <div class="row" style="align-items: center;">
+            <div class="col">
+                <img class="mx-auto d-block" style="display: flex; width: 70%; border-radius: 24px;" src="{% static 'img/tecladoBasado.jpg' %}" alt="TecladoRGBaboutUs">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-6">
+                <p style="text-align: center;">Fuimos creado debido a nuestras innovaciones y necesidad en entregar a la gente
+                    mejores servicios y productos dedicados a la escena del "gaming"</p>
+            </div>
+        </div>
+        <br>
+
+        <!-- formulario-->
+
+        <div class="row">
+            <div class="container" style="border-radius: 1vh; width: 35rem; padding: 2rem; text-align: center; background-color: rgba(12, 56, 34, 0.4); color: white; backdrop-filter: blur(10px); border: none; display: flex; flex-direction: column; gap: 1rem;">
+                <h2>Formulario de contacto</h2>
+                <form method="post" action="{% url 'enviar_correo' %}">
+                    {% csrf_token %}
+                    <div class="form-group">
+                      <label for="nombre">Nombre:</label>
+                      <input type="text" class="form-control" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Email:</label>
+                      <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="mensaje">Mensaje:</label>
+                      <textarea class="form-control" id="mensaje" name="mensaje" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                  </form>
+            </div>
+            
+        </div>
+
+        <div class="col-sm">
+            <h1 style="text-align: center;">¿Tienes alguna duda?</h1>
+            <p style="text-align: center;">Haz click en el botón de abajo para ir al area de soporte
+                y que podamos ayudarte con lo que necesites!</p>
+            <br>
+            <div class="d-flex justify-content-center align-items-center">
+                <a class="btn btn-primary" style="background-color: rgba(32, 32, 32, 0.4); color: white; backdrop-filter: blur(10px); border: none;" href="{% url 'soporte'%}">Soporte</a>
+            </div>
+            
+        </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soporte Kissu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="{% static 'css/Soporte.css' %}" rel="stylesheet">
+</head>
+<body style="background-image: url(https://www.pixelstalk.net/wp-content/uploads/images5/Japanese-Aesthetic-Wallpaper-HD.jpg); background-size: cover;">
+    <!--comienzo de la navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'index' %}">
+                <img src="{% static 'img/logo.png' %}" alt="Logo de OsuDevs" width="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="{% url 'acerca' %}">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'teclados' %}">Teclados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'soporte' %}">Soporte</a>
+                    </li>
+                </ul>
+            </div>
+            <span class="navbar-divider-vertical"></span>
+            <div class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#login">Inicio de sesión/Registro</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#carrito">
+                        <i class="bi bi-basket3"></i>
+                    </a>
+                </li>
+            </div>
+        </div>
+    </nav>
+        <!-- Final Navbar-->
+    <h1 class="bienvenido">Bienvenidos al soporte de Kissu</h1>
+    <div class="dudas">
+        <div class="row justify-content-center">
+            <div class="col-md-4" style="background-color: rgba(12, 56, 34, 0.4); color: white; backdrop-filter: blur(10px); border: none;">
+                <h3>Dudas más frecuentes</h3>
+                <ul>
+                    <a href=""><li>¿Cómo pagar?</li></a>
+                    <a href=""><li>¿De qué están construidos los teclados?</li></a>
+                    <a href=""><li>¿Cómo se construyen?</li></a>
+                    <a href=""><li>¿Se puede reembolsar en caso de que venga fallado?</li></a>
+                    <a href=""><li>Cuanto dura nuestra garantía</li></a>
+                </ul>
+            </div>
+            <div class="col-md-4" style="background-color: rgba(12, 56, 34, 0.4); color: white; backdrop-filter: blur(10px); border: none;">
+                <h3>Páginas para dudas</h3>
+                <ul>
+                    <a href=""><li>Problemas de software y como resolverlo</li></a>
+                    <a href=""><li>Ultimos videos de soporte</li></a>
+                    <a href=""><li>Donde se compran materiales</li></a>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 id="contacto">Si no logras encontrar tu duda no dudes en contactarnos a:</h1>
+        <h2 id="mail">kissusupport@gmail.com</h2>
+    </div>
+
+
+
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>
